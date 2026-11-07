@@ -6,14 +6,15 @@
     <title>Utkarsh Garg | Game Developer</title>
     <style>
         :root {
-            --bg-color: #0f1115;
-            --card-bg: #161920;
-            --card-border: #232733;
-            --accent-color: #4f46e5;
-            --accent-hover: #6366f1;
-            --text-main: #f3f4f6;
-            --text-muted: #9ca3af;
-            --tag-bg: #1f2430;
+            --bg-color: #0d1117;
+            --card-bg: #161b22;
+            --card-border: #30363d;
+            --accent-color: #ffffff;
+            --accent-hover: #79c0ff;
+            --link-blue: #58a6ff;
+            --text-main: #c9d1d9;
+            --text-muted: #8b949e;
+            --tag-bg: #21262d;
         }
 
         * {
@@ -27,7 +28,7 @@
             color: var(--text-main);
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             line-height: 1.6;
-            padding: 40px 20px;
+            padding: 50px 20px;
         }
 
         .container {
@@ -37,7 +38,7 @@
 
         /* Header / Bio */
         header {
-            margin-bottom: 50px;
+            margin-bottom: 40px;
             border-bottom: 1px solid var(--card-border);
             padding-bottom: 30px;
         }
@@ -45,13 +46,14 @@
         h1 {
             font-size: 2.5rem;
             font-weight: 800;
+            color: #ffffff;
             letter-spacing: -0.025em;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
         }
 
         .subtitle {
-            font-size: 1.25rem;
-            color: var(--accent-hover);
+            font-size: 1.2rem;
+            color: var(--accent-color);
             margin-bottom: 16px;
             font-weight: 500;
         }
@@ -64,191 +66,201 @@
 
         .links {
             display: flex;
-            gap: 16px;
+            gap: 20px;
+            align-items: center;
         }
 
         .links a {
-            color: var(--text-main);
+            color: var(--text-muted);
             text-decoration: none;
-            background: var(--card-bg);
-            padding: 8px 16px;
-            border-radius: 6px;
-            border: 1px solid var(--card-border);
             font-size: 0.9rem;
-            transition: border-color 0.2s, background 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: color 0.2s;
+        }
+
+        .links a svg {
+            fill: var(--text-muted);
+            width: 16px;
+            height: 16px;
+            transition: fill 0.2s;
         }
 
         .links a:hover {
-            border-color: var(--accent-color);
-            background: var(--tag-bg);
+            color: var(--accent-color);
+        }
+
+        .links a:hover svg {
+            fill: var(--accent-color);
         }
 
         /* Section Commons */
         section {
-            margin-bottom: 60px;
+            margin-bottom: 50px;
         }
 
         h2 {
-            font-size: 1.75rem;
-            margin-bottom: 24px;
-            border-left: 4px solid var(--accent-color);
-            padding-left: 12px;
+            font-size: 1.5rem;
+            color: #ffffff;
+            margin-bottom: 20px;
+            border-left: 3px solid var(--accent-color);
+            padding-left: 10px;
+            text-decoration: none;
         }
 
-        /* Work Experience */
-        .experience-card {
+        /* Work Experience & Education */
+        .experience-card, .education-card {
             background: var(--card-bg);
             border: 1px solid var(--card-border);
-            border-radius: 8px;
-            padding: 24px;
-            margin-bottom: 20px;
+            border-radius: 6px;
+            padding: 20px;
+            margin-bottom: 16px;
         }
 
         .exp-header {
             display: flex;
             justify-content: space-between;
-            align-items: baseline;
+            align-items: flex-start;
             flex-wrap: wrap;
-            margin-bottom: 8px;
-        }
-
-        .exp-title {
-            font-size: 1.15rem;
-            font-weight: 700;
+            margin-bottom: 10px;
         }
 
         .exp-company {
-            color: var(--accent-hover);
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #ffffff;
+            display: block;
+            margin-bottom: 2px;
+        }
+
+        .exp-role {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--accent-color);
+            display: block;
         }
 
         .exp-date {
-            font-size: 0.875rem;
+            font-size: 0.85rem;
             color: var(--text-muted);
         }
 
         .exp-list {
             list-style-type: disc;
-            padding-left: 20px;
+            padding-left: 18px;
             color: var(--text-muted);
         }
 
         .exp-list li {
-            margin-bottom: 8px;
+            margin-bottom: 6px;
+            font-size: 0.92rem;
         }
 
         /* Projects */
         .project-card {
             background: var(--card-bg);
             border: 1px solid var(--card-border);
-            border-radius: 8px;
-            padding: 24px;
-            margin-bottom: 28px;
+            border-radius: 6px;
+            padding: 20px;
+            margin-bottom: 24px;
         }
 
         .project-title {
-            font-size: 1.3rem;
-            margin-bottom: 12px;
+            font-size: 1.2rem;
+            color: #ffffff;
+            margin-bottom: 10px;
         }
 
         .project-video {
             width: 100%;
             aspect-ratio: 16 / 9;
             background: #000;
-            border-radius: 6px;
-            margin-bottom: 16px;
+            border-radius: 4px;
+            margin-bottom: 14px;
             object-fit: cover;
         }
 
         .project-summary {
             color: var(--text-muted);
-            margin-bottom: 16px;
+            font-size: 0.92rem;
+            margin-bottom: 14px;
         }
 
         .tags {
             display: flex;
             flex-wrap: wrap;
-            gap: 8px;
-            margin-bottom: 16px;
+            gap: 6px;
+            margin-bottom: 14px;
         }
 
         .tag {
             background: var(--tag-bg);
-            color: #d1d5db;
-            font-size: 0.8rem;
-            padding: 4px 10px;
+            color: var(--text-main);
+            font-size: 0.78rem;
+            padding: 3px 8px;
             border-radius: 4px;
             border: 1px solid var(--card-border);
         }
 
         .project-links a {
-            color: var(--accent-hover);
+            color: var(--link-blue);
             text-decoration: none;
             font-weight: 600;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
         }
 
         .project-links a:hover {
             text-decoration: underline;
         }
 
-        /* Skills */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 24px;
+        /* Skills Layout (Multi-column list style matching reference) */
+        .skills-container {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 6px;
+            padding: 24px;
         }
 
-        @media (max-width: 650px) {
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .skills-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
             .skills-grid {
                 grid-template-columns: 1fr;
             }
         }
 
-        .skill-group {
-            background: var(--card-bg);
-            border: 1px solid var(--card-border);
-            border-radius: 8px;
-            padding: 24px;
-        }
+        .skill-column h3 {
+            font-size: 0.95rem;
+            color: var(--accent-color);
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
 
-        .skill-group h3 {
-            font-size: 1.1rem;
-            margin-bottom: 16px;
-            color: var(--text-main);
-        }
-
-        .skill-item {
-            margin-bottom: 14px;
-        }
-
-        .skill-info {
+            min-height: 2.6em;
             display: flex;
-            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .skill-column ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .skill-column li {
             font-size: 0.9rem;
-            margin-bottom: 6px;
-        }
-
-        .skill-name {
-            font-weight: 500;
-        }
-
-        .skill-score {
-            color: var(--text-muted);
-            font-size: 0.8rem;
-        }
-
-        .skill-bar-bg {
-            width: 100%;
-            height: 6px;
-            background: var(--tag-bg);
-            border-radius: 3px;
-            overflow: hidden;
-        }
-
-        .skill-bar-fill {
-            height: 100%;
-            background: var(--accent-color);
-            border-radius: 3px;
+            color: var(--text-main);
+            margin-bottom: 8px;
         }
     </style>
 </head>
@@ -264,8 +276,14 @@
             Focused on building robust combat mechanics, state-driven behavior architecture, and efficient game pipelines.
         </p>
         <div class="links">
-            <a href="https://github.com/mrpanda6704" target="_blank">GitHub</a>
-            <a href="mailto:utkarshgarg505@gmail.com">Email</a>
+            <a href="https://github.com/mrpanda6704" target="_blank">
+                <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.22 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+                github.com/mrpanda6704
+            </a>
+            <a href="mailto:utkarshgarg505@gmail.com">
+                <svg viewBox="0 0 16 16"><path d="M1.75 2h12.5c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0114.25 14H1.75A1.75 1.75 0 010 12.25v-8.5C0 2.784.784 2 1.75 2zM1.5 4.5v7.75c0 .138.112.25.25.25h12.5a.25.25 0 00.25-.25V4.5L8.25 8.75 1.5 4.5zm13.125-1.25H1.375L8 7.375l6.625-4.125z"/></svg>
+                utkarshgarg505@gmail.com
+            </a>
         </div>
     </header>
 
@@ -275,7 +293,10 @@
 
         <div class="experience-card">
             <div class="exp-header">
-                <div class="exp-title">Software Engineering Intern at <span class="exp-company">S&P Global (TeraHelix)</span></div>
+                <div>
+                    <span class="exp-company">S&P Global (TeraHelix)</span>
+                    <span class="exp-role">Software Engineering Intern</span>
+                </div>
                 <div class="exp-date">June 2026 – Aug 2026</div>
             </div>
             <ul class="exp-list">
@@ -287,7 +308,10 @@
 
         <div class="experience-card">
             <div class="exp-header">
-                <div class="exp-title">Game Development Instructor at <span class="exp-company">IIIT Delhi</span></div>
+                <div>
+                    <span class="exp-company">IIIT Delhi</span>
+                    <span class="exp-role">Game Development Instructor</span>
+                </div>
                 <div class="exp-date">May 2025 – July 2025</div>
             </div>
             <ul class="exp-list">
@@ -296,14 +320,15 @@
         </div>
     </section>
 
+    <!-- Education Section -->
     <section id="education">
         <h2>Education</h2>
         <div class="education-card">
             <div class="exp-header">
-                <div class="exp-title">Indraprastha Institute of Information Technology, Delhi</div>
+                <div class="exp-company">Indraprastha Institute of Information Technology, Delhi</div>
                 <div class="exp-date">2023 – Present</div>
             </div>
-            <p class="project-summary" style="margin-bottom: 0;">
+            <p class="project-summary" style="margin-bottom: 0; font-size: 0.9rem;">
                 B.Tech in Computer Science and Engineering | CGPA: 8.1 (till 6th Sem)
             </p>
         </div>
@@ -329,7 +354,6 @@
                 <span class="tag">Systemic Combat</span>
                 <span class="tag">RPG</span>
             </div>
-            
         </div>
 
         <div class="project-card">
@@ -351,7 +375,6 @@
             </div>
         </div>
 
-
         <div class="project-card">
             <h3 class="project-title">Angry Birds in Pixel Art</h3>
             <video class="project-video" controls poster="">
@@ -364,7 +387,7 @@
             <div class="tags">
                 <span class="tag">Java</span>
                 <span class="tag">LibGDX</span>
-                <span class="tag">2D Physics Engine</span>
+                <span class="tag">2D PhysicsEngine</span>
             </div>
             <div class="project-links">
                 <a href="https://github.com/vidush11/angry-birds" target="_blank">View Repository →</a>
@@ -374,62 +397,59 @@
 
     <!-- Skills Section -->
     <section id="skills">
-        <h2>Skills & Proficiency</h2>
-        <div class="skills-grid">
-            <div class="skill-group">
-                <h3>Languages</h3>
-                <div id="languages-container"></div>
-            </div>
-            <div class="skill-group">
-                <h3>Technologies & Engines</h3>
-                <div id="technologies-container"></div>
+        <h2>Skills</h2>
+        <div class="skills-container">
+            <div class="skills-grid">
+                
+                <!-- Languages Column -->
+                <div class="skill-column">
+                    <h3>Languages</h3>
+                    <ul>
+                        <li>C++</li>
+                        <li>C#</li>
+                        <li>Java</li>
+                        <li>Python</li>
+                    </ul>
+                </div>
+
+                <!-- Engines / Frameworks Column -->
+                <div class="skill-column">
+                    <h3>Engines / Frameworks</h3>
+                    <ul>
+                        <li>Unreal Engine (GAS, Blueprint)</li>
+                        <li>Unity</li>
+                        <li>LibGDX</li>
+                    </ul>
+                </div>
+
+                <!-- Tools Column -->
+                <div class="skill-column">
+                    <h3>Tools</h3>
+                    <ul>
+                        <li>Maven / Gradle</li>
+                        <li>GitHub Actions (CI/CD)</li>
+                        <li>Artifactory</li>
+                        <li>Notion</li>
+                        <li>Blender</li>
+                    </ul>
+                </div>
+
+                <!-- Fields Column -->
+                <div class="skill-column">
+                    <h3>Fields</h3>
+                    <ul>
+                        <li>Gameplay Programming</li>
+                        <li>Combat Systems</li>
+                        <li>AI & Behavior</li>
+                        <li>API Regression Testing</li>
+                    </ul>
+                </div>
+
             </div>
         </div>
     </section>
 
 </div>
-
-<script>
-    // Configurable skill scores (0 - 100)
-    // Modify these numbers to adjust your proficiency scores.
-    const languagesData = [
-        { name: "C++", score: 98 },
-        { name: "C#", score: 90 },
-        { name: "Java", score: 95 },
-        { name: "Python", score: 90 }
-    ];
-
-    const technologiesData = [
-        { name: "Unreal Engine (C++, Gameplay Ability System, Blueprint)", score: 95 },
-        { name: "Unity", score: 80 },
-        { name: "LibGDX", score: 60 },
-        { name: "Git (LFS, Self-Hosted Gitea)", score: 100 },
-        { name: "Blender", score: 60 }
-    ];
-
-    function renderSortedSkills(skills, containerId) {
-        const container = document.getElementById(containerId);
-        
-        // Sort highest to lowest
-        const sortedSkills = [...skills].sort((a, b) => b.score - a.score);
-
-        container.innerHTML = sortedSkills.map(skill => `
-            <div class="skill-item">
-                <div class="skill-info">
-                    <span class="skill-name">${skill.name}</span>
-                    <span class="skill-score">${skill.score}%</span>
-                </div>
-                <div class="skill-bar-bg">
-                    <div class="skill-bar-fill" style="width: ${skill.score}%;"></div>
-                </div>
-            </div>
-        `).join('');
-    }
-
-    // Auto-sort and render on load
-    renderSortedSkills(languagesData, 'languages-container');
-    renderSortedSkills(technologiesData, 'technologies-container');
-</script>
 
 </body>
 </html>
