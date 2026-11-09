@@ -6,15 +6,22 @@
     <title>Utkarsh Garg | Game Developer</title>
     <style>
         :root {
-            --bg-color: #0d1117;
-            --card-bg: #161b22;
-            --card-border: #30363d;
-            --accent-color: #ffffff;
-            --accent-hover: #79c0ff;
-            --link-blue: #58a6ff;
-            --text-main: #c9d1d9;
-            --text-muted: #8b949e;
-            --tag-bg: #21262d;
+            --bg-color: #0d1111;          /* Slightly deeper dark terminal backdrop */
+            --card-bg: #131a16;           /* Subtle contrast for cards so they lift off the background */
+            --card-border: #2e4d38;       /* Deep muted green border instead of stark gray */
+            --accent-color: #02c61c;      /* Vibrant GitHub/Retro green for interactive accents & highlights */
+            --accent-hover: #56d364;      /* Brighter green glow on hover */
+            --link-blue: #02c61c;         /* Kept blue for distinct external links if needed (or match accent) */
+            --text-main: #8b949e;         /* Crisp silver-white for maximum readability */
+            --text-muted: #c9d1d9;        /* Classic muted gray for secondary text */
+            --heading-color: #3fb950;     /* Matches accent green for a unified retro terminal look */
+            --h3-color: #cfd3d6;          /* Pure white for bold card titles and company names */
+            --tag-bg: #16221c;
+            /* 8b949e */
+
+            --font-main: "VT323", monospace;            
+            --font-heading: "Press Start 2P", monospace;
+            --font-sub: "Courier New", monospace;
         }
 
         * {
@@ -26,7 +33,7 @@
         body {
             background-color: var(--bg-color);
             color: var(--text-main);
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-family: var(--font-main);
             line-height: 1.6;
             padding: 50px 20px;
         }
@@ -44,14 +51,16 @@
         }
 
         h1 {
+            font-family: var(--font-heading);
             font-size: 2.5rem;
-            font-weight: 800;
-            color: #ffffff;
+            font-weight: 500;
+            color: var(--heading-color);
             letter-spacing: -0.025em;
             margin-bottom: 6px;
         }
 
         .subtitle {
+            font-family: var(--font-sub);
             font-size: 1.2rem;
             color: var(--accent-color);
             margin-bottom: 16px;
@@ -101,8 +110,9 @@
         }
 
         h2 {
+            font-family: var(--font-heading);
             font-size: 1.5rem;
-            color: #ffffff;
+            color: var(--heading-color);
             margin-bottom: 20px;
             border-left: 3px solid var(--accent-color);
             padding-left: 10px;
@@ -127,14 +137,16 @@
         }
 
         .exp-company {
+            font-family: var(--font-heading);
             font-size: 1.1rem;
             font-weight: 700;
-            color: #ffffff;
+            color: var(--h3-color);
             display: block;
             margin-bottom: 2px;
         }
 
         .exp-role {
+            font-family: var(--font-sub);
             font-size: 0.95rem;
             font-weight: 600;
             color: var(--accent-color);
@@ -167,8 +179,9 @@
         }
 
         .project-title {
+            font-family: var(--font-heading);
             font-size: 1.2rem;
-            color: #ffffff;
+            color: var(--h3-color);
             margin-bottom: 10px;
         }
 
@@ -188,6 +201,7 @@
         }
 
         .tags {
+            font-family: var(--font-sub);
             display: flex;
             flex-wrap: wrap;
             gap: 6px;
@@ -241,6 +255,7 @@
         }
 
         .skill-column h3 {
+            font-family: var(--font-heading);
             font-size: 0.95rem;
             color: var(--accent-color);
             margin-bottom: 12px;
@@ -353,6 +368,24 @@
                 <span class="tag">GAS</span>
                 <span class="tag">Systemic Combat</span>
                 <span class="tag">RPG</span>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <h3 class="project-title">Modular Boss AI Framework</h3>
+            <video class="project-video" controls poster="">
+                <source src="Videos/BossAI_Demo.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <p class="project-summary">
+                Designed a Boss AI in Unreal Engine 5 using the above combat system. Integrated custom Behavior Trees with GAS gameplay tags and created adaptive attack patterns based on real-time player positioning.
+            </p>
+            <div class="tags">
+                <span class="tag">Unreal Engine 5.6</span>
+                <span class="tag">C++</span>
+                <span class="tag">GAS</span>
+                <span class="tag">Behavior Trees</span>
+                <span class="tag">Boss AI</span>
             </div>
         </div>
 
